@@ -6,6 +6,7 @@ Una pequeña SPA en React para registrar y visualizar vehículos usando mock dat
 
 ## 📦 Estructura del proyecto
 
+```text
 src/
 ├── components/
 │   ├── FilterBar.tsx            # Barra de filtros y acciones (Volver, Nuevo, Filtrar, Limpiar)
@@ -28,70 +29,92 @@ src/
 ├── App.tsx                      # Configuración de rutas con React Router
 ├── main.tsx                     # Punto de entrada (Vite / ReactDOM)
 └── index.css                    # Estilos globales y configuración de Tailwind
-
+```
 
 ---
 
 ## 🚀 Tecnologías
 
-- **React** con **Hooks**  
-- **TypeScript** para tipado seguro  
-- **Vite** como bundler  
-- **React Router** para navegación  
-- **Tailwind CSS** para estilos  
-- **react-icons**  
-- **Framer Motion** para animaciones  
-- **React Toastify** para notificaciones  
-- **uuid** para generar IDs  
-- **localStorage** para persistencia de datos  
+- **React** con **Hooks**
+- **TypeScript** para tipado seguro
+- **Vite** como bundler
+- **React Router** para navegación
+- **Tailwind CSS** para estilos
+- **react-icons** para iconos SVG
+- **Framer Motion** para animaciones fluidas
+- **React Toastify** para notificaciones emergentes
+- **uuid** para generación de identificadores únicos
+- **localStorage** para persistencia de datos en el navegador
 
 ---
 
 ## 🎨 Estilos y UX
 
-- Degradados suaves de fondo  
-- Encabezados con `bg-clip-text` y `text-transparent`  
-- Flexbox y CSS Grid para layouts responsivos  
-- Cards con `rounded-2xl`, `shadow-lg` y micro-interacciones  
-- Form controls con `focus:ring` y validación visual (`border-red-500`)  
-- Modales animados (scale + fade) y backdrop semi-transparente  
+- Degradados suaves de fondo (`bg-gradient-to-br from-blue-50 to-indigo-100`)
+- Encabezados con `bg-clip-text` y `text-transparent` para texturas de color
+- Flexbox y CSS Grid para layouts responsivos
+- Cards con `rounded-2xl`, `shadow-lg` y micro-interacciones (`hover:-translate-y-1`, `hover:shadow-2xl`)
+- Inputs y selects con `focus:ring`, validación visual de errores (`border-red-500`)
+- Modales animados con Framer Motion (scale + fade) y backdrop semi-transparente
 
 ---
 
 ## 📋 Funcionamiento
 
-1. **Landing Page**  
-   - Hero con icono animado y links a “Registrar Vehículo” y “Ver Vehículos”.
+1. **Landing Page**
+   - Hero con icono de vehículo rebotando (`animate-bounce`)
+   - Títulos y subtítulos con degradados y CTA a “Registrar Vehículo” / “Ver Vehículos”
 
-2. **Registrar Vehículo**  
-   - Formulario controlado por `useVehicleForm`.  
-   - Validaciones de placa (formato colombiano), año, ID, teléfono, email y nombre.  
-   - Al enviar genera `id` (UUID) y `createdAt`, guarda en `localStorage`, muestra toast y limpia form.
+2. **Registrar Vehículo**
+   - Formulario gestionado por el hook `useVehicleForm`
+   - Validaciones:
+     - **Placa**: formato colombiano (3 letras + 3 dígitos, opcional guion)
+     - **Año**: número > 1900 y hasta 4 dígitos
+     - **Documento**: solo números
+     - **Teléfono**: 10 dígitos
+     - **Email**: sintaxis válida de correo
+     - **Nombre**: solo letras y espacios
+   - Al enviar, genera `id` (UUID) y `createdAt` (timestamp ISO), guarda en `localStorage`, muestra toast y resetea el formulario
 
-3. **Listado de Vehículos**  
-   - Carga y ordena por `createdAt` (más recientes primero).  
-   - Filtro desplegable por Año, Marca, Propietario o Tenedor.  
-   - Paginación (6 ítems/página).  
-   - Eliminar con confirmación y toast; detalle en modal animado.
+3. **Listado de Vehículos**
+   - Hook `useVehicles` carga y ordena por `createdAt` (más recientes primero)
+   - Filtro desplegable en dropdown (clic en icono) por Año, Marca, Propietario o Tenedor
+   - Paginación mostrando 6 vehículos por página
+   - Eliminar vehículo con `ConfirmModal`, actualiza `localStorage` y muestra toast
+   - Click en tarjeta abre `VehicleModal` con detalle y animaciones
 
 ---
 
 ## ⚙️ Instalación y scripts
 
 ```bash
-# Clonar repo
+# Clonar el repositorio
 git clone https://github.com/tu-usuario/safite-vehicle-manager.git
 cd safite-vehicle-manager
 
 # Instalar dependencias
 npm install
 
-# Modo desarrollo
+# Iniciar en modo desarrollo
 npm run dev
 
-# Build producción
+# Crear build para producción
 npm run build
 
-# Previsualizar build
+# Previsualizar el build
 npm run preview
+```
 
+---
+
+## 📂 Personalización
+
+- **Pattern de fondo**: `public/pattern.svg`
+- **Tailwind**: configurar variables y purgado en `tailwind.config.js`
+- **Rutas**: editar en `App.tsx`
+- **Mock data**: precargar mediante
+  ```js
+  localStorage.setItem('vehiculos', JSON.stringify(exampleVehicles));
+  ```
+
+---
