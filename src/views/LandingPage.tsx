@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaCar } from "react-icons/fa";
 
 export default function LandingPage() {
@@ -14,28 +14,14 @@ export default function LandingPage() {
                 <p className="text-lg text-gray-700 mb-8"
                 >Registra y consulta la información de tus vehículos de manera sencilla y eficiente.</p>
                 <div className="flex justify-center space-x-4">
-                    <NavLink
-                        to="/registro"
-                        className={({ isActive }) =>
-                            `px-8 py-3 font-medium rounded-full shadow-lg transform transition-all hover:-translate-y-1 active:scale-95
-                            ${
-                                isActive
-                                    ? 'bg-indigo-700 text-white'
-                                    : 'bg-indigo-600 text-white hover:bg-indigo-700'
-                            }`
-                        }
-                    >Registrar Vehículo</NavLink>
-                    <NavLink
-                        to="/vehiculos"
-                        className={({ isActive }) =>
-                            `px-8 py-3 font-medium rounded-full shadow-lg transform transition-all hover:-translate-y-1 active:scale-95
-                            ${
-                                isActive
-                                    ? 'border-2 border-indigo-700 text-indigo-700 bg-transparent'
-                                    : 'border-2 border-indigo-600 text-indigo-600 bg-transparent hover:border-indigo-700 hover:text-indigo-700'
-                            }`
-                        }
-                    >Ver Vehículos</NavLink>
+                <Link
+                    to="/registro"
+                    className="px-8 py-3 font-medium rounded-full shadow-lg transform transition-all hover:-translate-y-1 active:scale-95 bg-indigo-600 text-white hover:bg-indigo-700"
+                >Registrar Vehículo</Link>
+                <Link
+                    to="/vehiculos"
+                    className="px-8 py-3 font-medium rounded-full shadow-lg transform transition-all hover:-translate-y-1 active:scale-95 border-2 border-indigo-600 text-indigo-600 bg-transparent hover:border-indigo-700 hover:text-indigo-700"
+                >Ver Vehículos</Link>
                 </div>
             </div>
         </div>
