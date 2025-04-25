@@ -6,7 +6,6 @@ Una pequeña SPA en React para registrar y visualizar vehículos usando mock dat
 
 ## 📦 Estructura del proyecto
 
-```text
 src/
 ├── components/
 │   ├── FilterBar.tsx            # Barra de filtros y acciones (Volver, Nuevo, Filtrar, Limpiar)
@@ -29,7 +28,6 @@ src/
 ├── App.tsx                      # Configuración de rutas con React Router
 ├── main.tsx                     # Punto de entrada (Vite / ReactDOM)
 └── index.css                    # Estilos globales y configuración de Tailwind
-```text
 
 
 ---
