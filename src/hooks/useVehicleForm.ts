@@ -83,7 +83,6 @@ export function useVehicleForm(initial?: Partial<VehicleFormState>) {
                 return;
             };
 
-            // Verificar duplicados por placa
             const storedVehicles = JSON.parse(localStorage.getItem('vehiculos') || '[]') as Vehicle[];
             if (storedVehicles.some(v => v.plate.toUpperCase() === form.plate.toUpperCase())) {
                 toast.error('Ya existe un vehículo con esa placa.');

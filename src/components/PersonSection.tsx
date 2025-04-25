@@ -19,16 +19,12 @@ export default function PersonSection({
                 const handleValue = (v: string) => {
                     let val = v
                     if (field === 'fullName') {
-                        // Solo letras y espacios
                         val = v.replace(/[^A-Za-z\s]/g, '')
                     } else if (field === 'id') {
-                        // Solo números
                         val = v.replace(/\D/g, '')
                     } else if (field === 'phone') {
-                        // Solo 10 dígitos
                         val = v.replace(/\D/g, '').slice(0, 10)
                     } else if (field === 'email') {
-                        // Solo caracteres válidos de email
                         val = v.replace(/[^A-Za-z0-9@._-]/g, '').toLowerCase()
                     }
                     onChange(field, val)
