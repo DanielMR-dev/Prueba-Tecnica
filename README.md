@@ -1,4 +1,4 @@
-# Vehicle Manager
+# Gestor de Vehículos
 
 Una pequeña SPA en React para registrar y visualizar vehículos usando mock data y persistencia en `localStorage`.
 
