@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "@/views/LandingPage";
-import VehicleForm from "@/components/VehicleForm";
-import VehicleList from "@/components/VehicleList";
+import VehicleForm from "@/views/VehicleForm";
+import VehicleList from "@/views/VehicleList";
 export default function Router() {
     return (
         <BrowserRouter>

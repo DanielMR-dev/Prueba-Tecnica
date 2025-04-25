@@ -4,8 +4,8 @@ export type Person = {
     phone: string;
     email: string;
 };
-  
 export type Vehicle = {
+    id: string;         
     plate: string;
     brand: string;
     model: string;
@@ -13,5 +13,6 @@ export type Vehicle = {
     owner: Person;
     holder: Person;
     driver: Person;
+    createdAt: string;
 };
   
