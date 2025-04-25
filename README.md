@@ -5,7 +5,31 @@ Una pequeña SPA en React para registrar y visualizar vehículos usando mock dat
 ---
 
 ## 📦 Estructura del proyecto
-src/ ├── components/ │ ├── FilterBar.tsx # Barra de filtros y acciones (Volver, Nuevo, Filtrar, Limpiar) │ ├── VehicleGrid.tsx # Grid responsive de VehicleCard │ ├── VehicleCard.tsx # Tarjeta individual de vehículo │ ├── VehicleModal.tsx # Modal de detalle de vehículo (Framer Motion) │ ├── Pagination.tsx # Controles de paginación │ ├── ConfirmModal.tsx # Modal genérico de confirmación de acción │ ├── InputField.tsx # Campo de texto genérico con validación visual │ ├── PersonSection.tsx # Sección de datos de persona (propietario, tenedor, conductor) │ └── VehicleFormButtons.tsx# Botones de acción en el formulario │ ├── hooks/ │ ├── useVehicles.ts # Lógica de listado: carga, orden, filtros, paginación, eliminación │ └── useVehicleForm.ts # Lógica de formulario: state, validaciones, submit, reset │ ├── pages/ │ ├── LandingPage.tsx # Hero de bienvenida con navegación │ ├── VehicleForm.tsx # Página de registro de vehículo │ └── VehicleList.tsx # Página de listado de vehículos │ ├── types.ts # Definición de interfaces Vehicle y Person ├── App.tsx # Rutas con React Router ├── main.tsx # Entrada (Vite / ReactDOM) └── index.css # Tailwind base + custom
+
+```text
+src/
+├── components/
+│   ├── FilterBar.tsx            # Barra de filtros y acciones (Volver, Nuevo, Filtrar, Limpiar)
+│   ├── VehicleGrid.tsx          # Grid responsive de VehicleCard
+│   ├── VehicleCard.tsx          # Tarjeta individual de vehículo
+│   ├── VehicleModal.tsx         # Modal de detalle de vehículo (Framer Motion)
+│   ├── Pagination.tsx           # Controles de paginación
+│   ├── ConfirmModal.tsx         # Modal genérico de confirmación de acción
+│   ├── InputField.tsx           # Campo de texto genérico con validación visual
+│   ├── PersonSection.tsx        # Sección de datos de persona (propietario, tenedor, conductor)
+│   └── VehicleFormButtons.tsx   # Botones de acción en el formulario
+├── hooks/
+│   ├── useVehicles.ts           # Lógica de listado: carga, orden, filtros, paginación, eliminación
+│   └── useVehicleForm.ts        # Lógica de formulario: estado, validaciones, envío, reset
+├── pages/
+│   ├── LandingPage.tsx          # Hero de bienvenida con navegación
+│   ├── VehicleForm.tsx          # Página de registro de vehículo
+│   └── VehicleList.tsx          # Página de listado de vehículos
+├── types.ts                     # Definición de interfaces `Vehicle` y `Person`
+├── App.tsx                      # Configuración de rutas con React Router
+├── main.tsx                     # Punto de entrada (Vite / ReactDOM)
+└── index.css                    # Estilos globales y configuración de Tailwind
+
 
 
 ---
