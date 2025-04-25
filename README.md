@@ -78,7 +78,7 @@ src/
 
 3. **Listado de Vehículos**
    - Hook `useVehicles` carga y ordena por `createdAt` (más recientes primero)
-   - Filtro desplegable en dropdown (clic en icono) por Año, Marca, Propietario o Tenedor
+   - Filtro desplegable hacia abajo (clic en icono) por Año, Marca, Propietario o Tenedor
    - Paginación mostrando 6 vehículos por página
    - Eliminar vehículo con `ConfirmModal`, actualiza `localStorage` y muestra toast
    - Click en tarjeta abre `VehicleModal` con detalle y animaciones
@@ -109,10 +109,9 @@ npm run preview
 
 ## 📂 Personalización
 
-- **Pattern de fondo**: `public/pattern.svg`
 - **Tailwind**: configurar variables y purgado en `tailwind.config.js`
 - **Rutas**: editar en `App.tsx`
-- **Mock data**: precargar mediante
+- **Mock data**: precargar en la consola del navegador mediante
   ```js
   localStorage.setItem('vehiculos', JSON.stringify(exampleVehicles));
   ```
