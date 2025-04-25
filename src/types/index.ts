@@ -1,12 +1,11 @@
-
 export type Person = {
     fullName: string;
     id: string;
     phone: string;
     email: string;
-  };
+};
   
-  export type Vehicle = {
+export type Vehicle = {
     plate: string;
     brand: string;
     model: string;
@@ -14,5 +13,5 @@ export type Person = {
     owner: Person;
     holder: Person;
     driver: Person;
-  };
+};
   
