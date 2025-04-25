@@ -29,7 +29,7 @@ src/
 ├── App.tsx                      # Configuración de rutas con React Router
 ├── main.tsx                     # Punto de entrada (Vite / ReactDOM)
 └── index.css                    # Estilos globales y configuración de Tailwind
-
+```text
 
 
 ---
